@@ -1,25 +1,17 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="manifest" href="manifest.json">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>SecurityCo Dashboard</title>
 
-    <!-- Manifesto do app -->
-    <link rel="manifest" href="manifest.json">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bibliotecas -->
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
 </head>
-
 <body>
 
     <div id="qrModal" style="
@@ -57,22 +49,16 @@
     </div>
 
     <header class="navbar">
-        <div class="logo">Securit<span>Co</span></div>
-
-        <nav class="nav-links">
-            <a class="active">Home</a>
-            <a id="aboutBtn">About</a>
-
-            <!-- REMOVIDO o file:/// local -->
-            <a href="#" class="btn-link-externo">
-                Detector de Fakes
-            </a>
-        </nav>
-    </header>
+    <div class="logo">Securit<span>Co</span></div>
+    <nav class="nav-links">
+        <a class="active">Home</a>
+        <a id="aboutBtn">About</a>
+        <a href="#"
+    </nav>
+</header>
 
     <section class="hero">
         <h1>Fique <span>informado.</span></h1>
-
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Pesquise a notícia">
             <button id="searchBtn">Pesquisar</button>
@@ -89,7 +75,7 @@
 
             <div class="glass-card" id="qrBox">
                 <h4>QR Code</h4>
-
+                
                 <input type="text" id="qrInput" placeholder="Cole a URL da notícia">
 
                 <button id="btnQR">Gerar QR Code</button>
@@ -115,6 +101,5 @@
     </main>
 
     <script src="script.js"></script>
-
 </body>
 </html>
