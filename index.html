@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurityCo Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://unpkg.com/jsqr/dist/jsQR.js"></script>
+</head>
+<body>
+
+    <div id="qrModal" style="
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.7);
+      display:none;
+      justify-content:center;
+      align-items:center;
+      z-index:99999;
+    ">
+        <div style="
+          background:#111;
+          padding:20px;
+          border-radius:12px;
+          text-align:center;
+          color:white;
+          position:relative;
+          width:300px;
+        ">
+            <button id="closeQR" style="
+              position:absolute;
+              top:8px;
+              right:10px;
+              background:none;
+              border:none;
+              color:white;
+              font-size:18px;
+              cursor:pointer;
+            ">✕</button>
+
+            <h3>QR Code Gerado</h3>
+            <div id="qrModalContent" style="margin-top:15px;"></div>
+        </div>
+    </div>
+
+    <header class="navbar">
+    <div class="logo">Securit<span>Co</span></div>
+    <nav class="nav-links">
+        <a class="active">Home</a>
+        <a id="aboutBtn">About</a>
+        <a href="file:///C:/Users/ferna/OneDrive/Desktop/Backup2/index.html" target="_blank" class="btn-link-externo">Detector de Fakes</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h1>Fique <span>informado.</span></h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquise a notícia">
+            <button id="searchBtn">Pesquisar</button>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section class="news">
+            <div id="feed"></div>
+        </section>
+
+        <aside class="sidebar">
+
+            <div class="glass-card" id="qrBox">
+                <h4>QR Code</h4>
+                
+                <input type="text" id="qrInput" placeholder="Cole a URL da notícia">
+
+                <button id="btnQR">Gerar QR Code</button>
+
+                <div id="qrcode">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=SecurityCo" alt="QR Code">
+                </div>
+
+                <button id="openCamera">Abrir câmera</button>
+                <video id="camera" autoplay playsinline></video>
+
+                <div id="result"></div>
+            </div>
+
+            <div class="card glass">
+                <h3>Histórico</h3>
+                <span id="clearHistory">Clear all</span>
+                <ul id="history"></ul>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
