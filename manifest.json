@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "SecuritCo",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "SecuritCo",
+  "start_url": "/",
+  "theme_color": "#c7e3f0",
+  "id": "securitco",
+  "description": "Aplicativo de segurança e detector de notícias fakes."
+}
